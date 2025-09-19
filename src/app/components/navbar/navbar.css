@@ -1,0 +1,76 @@
+.navbar{
+    --color-primario: #6C63FF;
+    width: 100%;
+    height: fit-content;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-primario);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: large;
+}
+
+.options ul {
+  display: flex;
+}
+
+/* Links generales */
+.options li a {
+  color: var(--color-primario);
+  padding: 10px 15px;
+  display: inline-block;
+  position: relative; /* necesario para la pseudo-línea */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animación al hacer hover */
+.options li a:hover {
+  transform: translateY(-3px); /* se mueve hacia arriba */
+}
+
+/* Línea subrayada animada */
+.options li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-primario);
+  transition: width 0.3s ease;
+}
+
+.options li a:hover::after {
+  width: 100%; /* la línea se expande */
+}
+
+/* Separación entre li */
+.options li {
+  margin: 25px;
+}
+
+/* Botón Hire Me */
+.hire-me-btn {
+  border: 2px solid var(--color-primario);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--color-primario);
+  padding: 10px 15px;
+}
+
+.hire-me-btn:hover {
+  background-color: var(--color-primario);
+  color: #fff; /* texto en blanco al hacer hover */
+}
