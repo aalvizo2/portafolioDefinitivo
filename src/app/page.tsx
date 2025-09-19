@@ -1,5 +1,6 @@
 "use client"
 import Navbar from "./components/navbar/navbar"
+import avatar from '../../public/img/avatar.png'
 
 export default function Home() {
    
@@ -32,6 +33,9 @@ export default function Home() {
               </button>
           </div>
         </div>
+      </div>
+      <div className="main-avatar-frame">
+        
       </div>
     </>
   )
