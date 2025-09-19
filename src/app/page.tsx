@@ -1,6 +1,6 @@
 "use client"
 import Navbar from "./components/navbar/navbar"
-import avatar from '../../public/img/avatar.png'
+
 
 export default function Home() {
    
@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className="space"></div>
-      <div className="mainframe">
+      <div className="main-frame">
         <div className="first-layer text-center">
           <h1>
             <span className="wave inline-block">✋</span> Hello, I'm
@@ -33,10 +33,13 @@ export default function Home() {
               </button>
           </div>
         </div>
+        <div className="second-layer">
+         <div className="avatar">
+            <img src="/img/avatar.png" alt="avatar" />
+         </div>
       </div>
-      <div className="main-avatar-frame">
-        
       </div>
+      
     </>
   )
 }
