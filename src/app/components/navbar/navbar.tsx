@@ -9,8 +9,8 @@ const Navbar: React.FC= ()=> {
            </div>
            <div className="options">
               <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="">Skills</a></li>
                 <li><a href="">Contact</a></li>
                 <li ><button className='hire-me-btn'>Hire Me</button></li>

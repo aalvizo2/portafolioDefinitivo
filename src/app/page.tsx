@@ -1,5 +1,7 @@
 "use client"
+import About from "./components/about/about"
 import Navbar from "./components/navbar/navbar"
+import Projects from "./components/projects/projects"
 
 
 export default function Home() {
@@ -16,8 +18,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="space"></div>
-      <div className="main-frame">
+      <div className="space" id="about"></div>
+      <div className="main-frame" >
         <div className="first-layer text-center">
           <h1>
             <span className="wave inline-block">✋</span> Hello, I'm
@@ -39,6 +41,9 @@ export default function Home() {
          </div>
       </div>
       </div>
+      <About/>
+
+      <Projects />
       
     </>
   )

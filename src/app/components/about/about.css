@@ -1,0 +1,45 @@
+.wrapper-about{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+.container-about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-about{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-about img{
+    width: 50%;
+    
+}
+
+.container-text{
+    width: 50%;
+    height: fit-content;
+}
+
+.container-text h1{
+    color: var(--color-primario);
+    font-size: 24px;
+}
+
+.container-text p{
+    text-align: justify;
+    margin-right: 450px;
+    color: var(--color-primario);
+}
+
+
+

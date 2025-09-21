@@ -3,8 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primario: #6C63FF; 
-}
+  /* --color-primario: #6C63FF;*/
+  --color-primario: #293241;
+} 
 
 
 
@@ -98,17 +99,28 @@ body {
   border: 1px solid var(--color-primario);
   color: var(--color-primario)
 }
-
-.avatar{
+.avatar {
   width: 350px;
   height: 350px;
-  background-color: var(--color-primario);
   border-radius: 50%;
-  
+  overflow: hidden; 
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: var(--color-primario);
 }
 
-.avatar img{
+.avatar img {
   width: 100%;
-  object-fit: fill;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%;    
 }
 
+
+@media screen and (max-width: 900px) {
+    .avatar{
+      width: 30%;
+      height: 30%;
+    }
+}
