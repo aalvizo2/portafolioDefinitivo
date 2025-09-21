@@ -2,19 +2,19 @@
 import About from "./components/about/about"
 import Navbar from "./components/navbar/navbar"
 import Projects from "./components/projects/projects"
-
+import Image from 'next/image'
 
 export default function Home() {
-   
-  const handleDownloadCV= () =>{
-    const link= document.createElement("a")
-    link.href= "/CV Alan Esteban Alvizo Ortega.pdf"
-    link.download= "CV Alan Esteban Alvizo Ortega"
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a")
+    link.href = "/CV Alan Esteban Alvizo Ortega.pdf"
+    link.download = "CV Alan Esteban Alvizo Ortega"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
   }
- 
+
   return (
     <>
       <Navbar />
@@ -27,24 +27,29 @@ export default function Home() {
           <h1 className="text-indigo-500 font-bold">Alan Alvizo</h1>
           <h3 className="text-gray-600">FullStack Developer</h3>
           <div className="btns">
-              <button className="projects-btn">
-                 View Projects
-              </button>
-              <button className="cv-btn" onClick={handleDownloadCV}>
-                 Download CV
-              </button>
+            <button className="projects-btn">
+              View Projects
+            </button>
+            <button className="cv-btn" onClick={handleDownloadCV}>
+              Download CV
+            </button>
           </div>
         </div>
         <div className="second-layer">
-         <div className="avatar">
-            <img src="/img/avatar.png" alt="avatar" />
-         </div>
+          <div className="avatar">
+            <Image
+              src="/img/avatar.png"
+              alt="avatar"
+              width={350}
+              height={350}
+            />
+          </div>
+        </div>
       </div>
-      </div>
-      <About/>
+      <About />
 
       <Projects />
-      
+
     </>
   )
 }

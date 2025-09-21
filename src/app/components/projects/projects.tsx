@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './projects.css'
 
+interface Project{
+  id: string;
+  title: string;
+  description: string,
+  technologies: [string];
+
+}
 function Projects() {
-  const [data, setData] = useState<any[]>([])
+  const [data, setData] = useState<Project[]>([])
 
   async function fetchData() {
     const response = await fetch('/api/projects')

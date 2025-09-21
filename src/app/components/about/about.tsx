@@ -1,13 +1,18 @@
 import React from 'react'
 import './about.css'
-
+import Image from 'next/image'
 function About(){
     return(
         <>
            <div className="wrapper-about">
                <div className="container-about">
                    <div className="avatar-about">
-                       <img src="/img/avatar2.png" alt="second-avatar" />
+                       <Image 
+                          src="/img/avatar2.png" 
+                          alt="second-avatar"
+                          width={350}
+                          height={350}
+                        />
                    </div>
                    <div className="container-text">
                        <h1>About</h1>
