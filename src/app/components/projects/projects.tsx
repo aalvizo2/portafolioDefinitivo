@@ -5,7 +5,7 @@ interface Project{
   id: string;
   title: string;
   description: string,
-  technologies: [string];
+  technologies: string[];
 
 }
 function Projects() {
