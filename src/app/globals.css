@@ -23,6 +23,8 @@ body {
   width: 100%;
   height: fit-content;
   display: flex;
+  margin-bottom: 350px;
+  
 }
 
 .first-layer{
@@ -31,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 50px 150px;
+  
   
   
 
@@ -98,13 +101,36 @@ body {
   background-color: #fff;
   border: 1px solid var(--color-primario);
   color: var(--color-primario)
+} 
+
+
+.projects-btn, .cv-btn {
+  margin: 10px 5px 0 5px; /* Espaciado uniforme */
+  padding: 8px 20px;       /* Tamaño inicial decente */
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+/* Hover */
+.projects-btn:hover {
+  background-color: var(--color-primario);
+  color: #fff;
+}
+.cv-btn:hover {
+  background-color: #fff;
+  border: 1px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
 .avatar {
   width: 350px;
   height: 350px;
   border-radius: 50%;
   overflow: hidden; 
   display: flex;
+  
   /* align-items: center; */
   /* justify-content: center; */
   background-color: var(--color-primario);
@@ -118,9 +144,83 @@ body {
 }
 
 
-@media screen and (max-width: 900px) {
-    .avatar{
-      width: 30%;
-      height: 30%;
-    }
+/* Animación de typed.js */
+.typed-cursor {
+  font-size: 20px;
+  color: var(--color-primario);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .first-layer h1 {
+    font-size: 1.8rem;
+  }
+  .first-layer h3 {
+    font-size: 1rem;
+  }
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-frame {
+    flex-direction: column-reverse;
+    align-items: center;
+    
+  }
+  .first-layer {
+    padding: 30px 10px;
+    margin-top: 30px;
+  }
+  .avatar {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .first-layer h1 {
+    font-size: 1.5rem;
+  }
+  .first-layer h3 {
+    font-size: 0.9rem;
+  }
+  .projects-btn, .cv-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Media queries para botones */
+@media screen and (max-width: 1024px) {
+  .projects-btn, .cv-btn {
+    padding: 7px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-btn, .cv-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-btn, .cv-btn {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
 }

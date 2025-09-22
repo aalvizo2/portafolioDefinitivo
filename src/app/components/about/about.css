@@ -1,45 +1,85 @@
-.wrapper-about{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
+.wrapper-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.container-about {
+  display: flex;
+  gap: 240px;
+  max-width: 1100px;
+  align-items: center;
+  padding: 2rem;
+}
+
+.avatar-about {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-text {
+  flex: 1;
+}
+
+.container-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primario);
+}
+
+.container-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Íconos */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.tech-icons span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Colores por tecnología */
+.icon {
+  font-size: 1.2rem;
+}
+.react { color: #61dafb; }
+.node { color: #3c873a; }
+.mysql { color: #00758f; }
+.next { color: #000; }
+.nest { color: #e0234e; }
+.angular { color: #dd1b16; }
+.github { color: #333; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container-about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar-about {
+    margin-bottom: 20px;
+  }
+
+  .tech-icons {
     justify-content: center;
-    margin-top: 250px;
+  }
 }
-.container-about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.avatar-about{
-    width: 50%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.avatar-about img{
-    width: 50%;
-    
-}
-
-.container-text{
-    width: 50%;
-    height: fit-content;
-}
-
-.container-text h1{
-    color: var(--color-primario);
-    font-size: 24px;
-}
-
-.container-text p{
-    text-align: justify;
-    margin-right: 450px;
-    color: var(--color-primario);
-}
-
-
-
