@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import "./contact.css";
-import * as message from 'antd'
+import message from 'antd'
 
 
 
