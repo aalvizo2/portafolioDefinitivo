@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import "./contact.css";
-import message from 'antd'
+import {message} from 'antd'
 
 
 
@@ -29,7 +29,7 @@ function Contact() {
         })
 
         const data= await response.json()
-        //@ts-expect-error
+        
         message.success(data.message)
      }catch(error){
         console.error('Error sending email', error)
