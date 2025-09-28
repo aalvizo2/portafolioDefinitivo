@@ -39,7 +39,8 @@ const Data=[
             'MongoDB',
             'DayJs',
             
-        ]
+        ],
+        github: 'https://github.com/aalvizo2/financiamos_react'
     }
 ]
 export async function GET() {

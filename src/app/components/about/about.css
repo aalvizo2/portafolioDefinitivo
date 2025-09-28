@@ -74,9 +74,13 @@
     flex-direction: column;
     text-align: center;
   }
-
+   
 
   .tech-icons {
     justify-content: center;
+  }
+
+  .container-text{
+    margin-top: -200px;
   }
 }

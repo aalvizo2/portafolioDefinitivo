@@ -22,6 +22,7 @@
   font-size: 24px;
   margin-bottom: 1.5rem;
   margin-left: 50px;
+  color: var(--color-primario);
 }
 
 .card {
@@ -88,4 +89,31 @@
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
   font-size: 0.75rem;
+}
+
+
+.card-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-buttons .btn {
+  padding: 8px 14px;
+  background-color: #000;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.card-buttons .btn:hover {
+  background-color: #1d1a1e;
+}
+
+@media (max-width: 768px) {
+   .projects-title{
+      text-align: center;
+   }
 }

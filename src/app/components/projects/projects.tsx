@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './projects.css'
+import Image from 'next/image'
 
 interface Project {
   id: string
@@ -7,6 +8,8 @@ interface Project {
   description: string
   technologies: string[]
   img?: string
+  route?: string
+  github?: string,
 }
 
 function Projects() {
@@ -29,7 +32,11 @@ function Projects() {
         {data.map((item) => (
           <div className="card" key={item.id}>
             <div className="card-image">
-              {item.img ? <img src={item.img} alt={item.title} /> : <div className="placeholder" />}
+              {item.img ? (
+                <Image src={item.img} alt={item.title} width={100} height={90} />
+              ) : (
+                <div className="placeholder" />
+              )}
             </div>
 
             <div className="card-content">
@@ -43,6 +50,20 @@ function Projects() {
                   </span>
                 ))}
               </div>
+
+              {/* 🔹 Botones abajo */}
+              <div className="card-buttons">
+                {item.route && (
+                  <a href={item.route} target="_blank" rel="noopener noreferrer" className="btn">
+                    View Demo
+                  </a>
+                )}
+                {item.github && (
+                  <a href={item.github} target="_blank" rel="noopener noreferrer" className="btn">
+                    GitHub
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -52,3 +73,4 @@ function Projects() {
 }
 
 export default Projects
+

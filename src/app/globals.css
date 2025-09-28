@@ -23,16 +23,15 @@ body {
   width: 100%;
   height: fit-content;
   display: flex;
-  margin-bottom: 350px;
+  margin-bottom: 450px;
   
 }
 
 .first-layer{
   width: 50%;
   border: none;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 150px;
+  margin-left: 150px;
+  padding: 50px 250px;
   
   
   
@@ -41,9 +40,10 @@ body {
 
 .second-layer{
   width: 50%;
-  display: flex;
+  
+   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .first-layer h1{
@@ -179,6 +179,7 @@ body {
   .first-layer {
     padding: 30px 10px;
     margin-top: 30px;
+    margin-left: 0;
   }
   .avatar {
     width: 180px;

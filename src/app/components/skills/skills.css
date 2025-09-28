@@ -68,3 +68,10 @@
 .angular { color: #dd1b16; }
 .mysql { color: #00758f; }
 .github { color: #333; }
+
+
+@media (max-width: 768px) {
+   .container-skills h1{
+      text-align: center;
+   }
+}

@@ -6,6 +6,7 @@ import Projects from "./components/projects/projects"
 import Image from 'next/image'
 import Typed from 'typed.js'
 import Skills from "./components/skills/skills"
+import Contact from "./components/contact/contact"
 
 export default function Home() {
   const typedRef = useRef<HTMLSpanElement>(null)
@@ -76,6 +77,7 @@ export default function Home() {
 
       <Projects />
       <Skills />
+      <Contact />
     </>
   )
 }
