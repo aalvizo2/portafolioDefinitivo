@@ -8,14 +8,14 @@ function Footer() {
         {/* Columna 1 */}
         <div className="footer-brand">
           <h2>Alan Alvizo</h2>
-          <p>Fullstack Developer passionate about building digital solutions 🚀</p>
+          <p>Fullstack Developer passionate about building digital solutions.</p>
         </div>
 
         {/* Columna 2 */}
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -26,9 +26,9 @@ function Footer() {
         <div className="footer-social">
           <h3>Connect</h3>
           <div className="icons">
-            <a href="mailto:tuemail@gmail.com"><Mail size={20} /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
-            <a href="https://github.com" target="_blank" rel="noreferrer"><Github size={20} /></a>
+            <a href="mailto:alanestebana@gmail.com"><Mail size={20} /></a>
+            <a href="https://www.linkedin.com/in/alan-esteban-alvizo-ortega-870750267/" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
+            <a href="https://github.com/aalvizo2" target="_blank" rel="noreferrer"><Github size={20} /></a>
           </div>
         </div>
       </div>

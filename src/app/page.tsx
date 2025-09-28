@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Typed from 'typed.js'
 import Skills from "./components/skills/skills"
 import Contact from "./components/contact/contact"
+import Footer from "./components/footer/footer"
 
 export default function Home() {
   const typedRef = useRef<HTMLSpanElement>(null)
@@ -78,6 +79,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </>
   )
 }
