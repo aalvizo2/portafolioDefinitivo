@@ -1,5 +1,6 @@
 import { Linkedin, Github, Mail } from 'lucide-react'
 import './footer.css'
+import Link from 'next/link'
 
 function Footer() {
   return (
@@ -15,10 +16,10 @@ function Footer() {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="#skills">Skills</Link></li>
+            <li><Link href="#projects">Projects</Link></li>
+            <li><Link href="#contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -26,9 +27,9 @@ function Footer() {
         <div className="footer-social">
           <h3>Connect</h3>
           <div className="icons">
-            <a href="mailto:alanestebana@gmail.com"><Mail size={20} /></a>
-            <a href="https://www.linkedin.com/in/alan-esteban-alvizo-ortega-870750267/" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
-            <a href="https://github.com/aalvizo2" target="_blank" rel="noreferrer"><Github size={20} /></a>
+            <Link href="mailto:alanestebana@gmail.com"><Mail size={20} /></Link>
+            <Link href="https://www.linkedin.com/in/alan-esteban-alvizo-ortega-870750267/" target="_blank" rel="noreferrer"><Linkedin size={20} /></Link>
+            <Link href="https://github.com/aalvizo2" target="_blank" rel="noreferrer"><Github size={20} /></Link>
           </div>
         </div>
       </div>

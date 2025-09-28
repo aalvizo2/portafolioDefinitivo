@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"
 import "./contact.css"
-
+import Link from 'next/link'
 
 
 
@@ -36,7 +36,10 @@ function Contact() {
             })
 
             const data = await response.json()
-            showToast(data.message, 'success')
+            if(data.success){
+
+            }
+            showToast(data.message)
 
         } catch (error) {
             console.error('Error sending email', error)
@@ -61,8 +64,8 @@ function Contact() {
                             <li><MapPin size={18} /> Arandas, Jalisco</li>
                         </ul>
                         <div className="social-icons">
-                            <a href="https://www.linkedin.com/in/alan-esteban-alvizo-ortega-870750267/" target="_blank" rel="noreferrer"><Linkedin size={22} /></a>
-                            <a href="https://github.com/aalvizo2" target="_blank" rel="noreferrer"><Github size={22} /></a>
+                            <Link href="https://www.linkedin.com/in/alan-esteban-alvizo-ortega-870750267/" target="_blank" rel="noreferrer"><Linkedin size={22} /></Link>
+                            <Link href="https://github.com/aalvizo2" target="_blank" rel="noreferrer"><Github size={22} /></Link>
                         </div>
                     </div>
 
