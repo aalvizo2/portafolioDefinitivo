@@ -31,7 +31,7 @@ body {
   width: 50%;
   border: none;
   margin-left: 150px;
-  padding: 50px 250px;
+  padding: 50px 250px; 
   
   
   
@@ -205,13 +205,27 @@ body {
 }
 
 /* Media queries para botones */
-@media screen and (max-width: 1024px) {
-  .projects-btn, .cv-btn {
-    padding: 7px 18px;
-    font-size: 0.95rem;
+@media screen and (max-width: 1500px) {
+  .first-layer {
+    margin-left: 50px;   /* Reducir margen */
+    padding: 30px 50px;  /* Menos padding lateral */
+    width: 100%;         /* Que ocupe todo el ancho disponible */
+  }
+
+  .first-layer h1 {
+    font-size: 1.8rem;
+  }
+
+  .first-layer h3 {
+    font-size: 1rem;
+  }
+
+  .avatar {
+    width: 250px;
+    height: 250px;
   }
 }
-
+  
 @media screen and (max-width: 768px) {
   .projects-btn, .cv-btn {
     padding: 6px 15px;
