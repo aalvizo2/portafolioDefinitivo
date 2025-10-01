@@ -8,6 +8,10 @@
 } 
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   background: var(--background);
@@ -31,7 +35,7 @@ body {
   width: 50%;
   border: none;
   margin-left: 150px;
-  padding: 50px 250px; 
+  padding: 2rem 4rem; /* en lugar de 50px 250px */
   
   
   
@@ -205,11 +209,11 @@ body {
 }
 
 /* Media queries para botones */
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
   .first-layer {
-    margin-left: 50px;   /* Reducir margen */
-    padding: 30px 50px;  /* Menos padding lateral */
-    width: 100%;         /* Que ocupe todo el ancho disponible */
+    margin-left: 50px;  
+    padding: 30px 50px;  
+    width: 100%;         
   }
 
   .first-layer h1 {
@@ -224,7 +228,7 @@ body {
     width: 250px;
     height: 250px;
   }
-}
+} */
   
 @media screen and (max-width: 768px) {
   .projects-btn, .cv-btn {

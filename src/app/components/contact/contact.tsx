@@ -87,6 +87,13 @@ function Contact() {
           </form>
         </div>
       </div>
+
+      {/* ✅ Aquí agregamos el toast */}
+      {toast.show && (
+        <div className={`toast ${toast.type}`}>
+          {toast.message}
+        </div>
+      )}
     </div>
   )
 }
