@@ -39,12 +39,12 @@ function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
         body: JSON.stringify(formData),
       })
 
-      const data: { success: boolean; message: string } = await response.json()
+      const data = await response.json()
       showToast(data.message, data.success ? "success" : "error")
 
       if (data.success) {
         form.reset()
-        onClose() // 🔥 cerramos modal si todo salió bien
+        onClose() // ✅ Cerramos inmediatamente el modal
       }
     } catch (error) {
       console.error("Error sending email", error)
@@ -54,41 +54,40 @@ function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
     }
   }
 
-  if (!isOpen) return null
-
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>✖</button>
-        <h2>Work with Me 🚀</h2>
+    <>
+      {/* Toast fuera de cualquier overlay - siempre visible */}
+      {toast.show && (
+        <div className={`toast global-toast ${toast.type}`}>
+          {toast.message}
+        </div>
+      )}
 
-        <form onSubmit={handleSubmit}>
-          <label>Name</label>
-          <input type="text" placeholder="Your name" name="name" required />
+      {/* Modal */}
+      {isOpen && (
+        <div className="modal-overlay" onClick={onClose}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={onClose}>✖</button>
+            <h2>Work with Me 🚀</h2>
 
-          <label>Email</label>
-          <input type="email" placeholder="Your email" name="email" required />
+            <form onSubmit={handleSubmit}>
+              <label>Name</label>
+              <input type="text" placeholder="Your name" name="name" required />
 
-          <label>Message</label>
-          <textarea placeholder="Tell me about your project..." name="message" required />
+              <label>Email</label>
+              <input type="email" placeholder="Your email" name="email" required />
 
-          <button type="submit" className="send-btn">
-            {loading ? <span className="spinner"></span> : "Send"}
-          </button>
-        </form>
+              <label>Message</label>
+              <textarea placeholder="Tell me about your project..." name="message" required />
 
-
-       
-      </div>
-       {/* ⬇️ Toast fuera del modal */}
-        {toast.show && (
-          <div className={`toast ${toast.type}`}>
-            {toast.message}
+              <button type="submit" className="send-btn">
+                {loading ? <span className="spinner"></span> : "Send"}
+              </button>
+            </form>
           </div>
-        )}
-
-    </div>
+        </div>
+      )}
+    </>
   )
 }
-
 export default HireMeModal
