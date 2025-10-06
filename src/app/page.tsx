@@ -11,7 +11,7 @@ import Footer from "./components/footer/footer"
 
 export default function Home() {
   const typedRef = useRef<HTMLSpanElement>(null)
-  
+
   const handleDownloadCV = () => {
     const link = document.createElement("a")
     link.href = "/CV Alan Esteban Alvizo Ortega.pdf"
@@ -23,21 +23,21 @@ export default function Home() {
 
   //hacemos el efecto typed 
   useEffect(() => {
-    if(typedRef.current){
-       const typed= new Typed(typedRef.current, {
-         strings: [
-           "Node.js Developer",
-           "React.js Developer",
-           "Frontend Developer",
-           "Backend Developer",
-           "FullStack Developer",
-           "Your best choice"
-         ],
-         typeSpeed: 60,
-         backSpeed: 40,
-         loop: true,
-       })
-       return () => typed.destroy()
+    if (typedRef.current) {
+      const typed = new Typed(typedRef.current, {
+        strings: [
+          "Node.js Developer",
+          "React.js Developer",
+          "Frontend Developer",
+          "Backend Developer",
+          "FullStack Developer",
+          "Your best choice"
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+      })
+      return () => typed.destroy()
     }
   }, [])
 
@@ -52,12 +52,16 @@ export default function Home() {
           </h1>
           <h1 className="text-indigo-500 font-bold">Alan Alvizo</h1>
           <h3 className="text-gray-600">
-             <span ref={typedRef}></span>
+            <span ref={typedRef}></span>
           </h3>
           <div className="btns">
-            <button className="projects-btn">
+            <button
+              className="projects-btn"
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+            >
               View Projects
             </button>
+
             <button className="cv-btn" onClick={handleDownloadCV}>
               Download CV
             </button>

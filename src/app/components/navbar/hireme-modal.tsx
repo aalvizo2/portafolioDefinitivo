@@ -44,7 +44,7 @@ function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
 
       if (data.success) {
         form.reset()
-        onClose() // ✅ Cerramos inmediatamente el modal
+        onClose() 
       }
     } catch (error) {
       console.error("Error sending email", error)
