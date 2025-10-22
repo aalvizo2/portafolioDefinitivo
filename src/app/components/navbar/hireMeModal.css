@@ -82,7 +82,7 @@
 }
 
 .toast.success {
-  background: #4caf50; /* verde */
+  background: #ccc; /* verde */
 }
 
 .toast.error {
